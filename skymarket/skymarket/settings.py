@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "corsheaders",
-    "djoser"
+    "djoser",
     "rest_framework",
     "users",
     "ads",
@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'skymarket',
         'USER': 'skymarket',
         'PASSWORD': 'skymarket',
-        'PORT': '5433',
+        'PORT': '5432',
         'HOST': 'localhost'
     }
 }
