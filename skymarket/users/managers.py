@@ -12,7 +12,7 @@ class UserRoles(models.TextChoices):
 
 class UserManager(BaseUserManager):
     """
-    функция создания пользователя — в нее мы передаем обязательные поля
+    Создает и сохраняет пользователя с указанными полями
     """
 
     def create_user(self, email, first_name, last_name, phone, role=UserRoles.USER, password=None):
@@ -33,7 +33,7 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, email, first_name, last_name, phone, role=UserRoles.ADMIN, password=None):
         """
-        функция для создания суперпользователя — с ее помощью мы создаем админинстратора
+        Создаёт суперпользователя — с ее помощью мы создаем админинстратора
         это можно сделать с помощью команды createsuperuser
         """
 
