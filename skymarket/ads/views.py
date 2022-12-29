@@ -19,7 +19,7 @@ class AdViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_serializer_class(self):
-        if self.action in ['retrieve ']:
+        if self.action in ['retrieve']:
             return AdDetailSerializer
         else:
             return AdSerializer

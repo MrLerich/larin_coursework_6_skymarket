@@ -7,8 +7,8 @@ from users.managers import UserManager, UserRoles
 
 
 class User(AbstractBaseUser):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
     phone = PhoneNumberField()
     email = models.EmailField(unique=True)
     role = models.CharField(max_length=3, choices=UserRoles.choices, default=UserRoles.USER)
