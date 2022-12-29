@@ -5,8 +5,8 @@ from ads.models import Ad
 
 
 class AdFilter(FilterSet):
-    title = CharFilter(field_name='title', lookup_expr='icontains')
+    title = CharFilter(field_name='Title', lookup_expr='icontains')
 
     class Meta:
         model = Ad
-        fields = ('title')
+        fields = ['title']

@@ -15,7 +15,7 @@ class User(AbstractBaseUser):
                                  help_text="Введите Фамилию, макс 200 символов",
                                  max_length=200,
                                  blank=True)
-    phone = PhoneNumberField(verbose_name='Номер телефона', unique=True, null=False, blank=False)
+    phone = PhoneNumberField(verbose_name='Номер телефона', null=False, blank=False)
     email = models.EmailField(unique=True, help_text="Укажите ваш email", )
     role = models.CharField(max_length=3, choices=UserRoles.choices, default=UserRoles.USER)
     image = models.ImageField(upload_to='avatars', null=True, blank=True)

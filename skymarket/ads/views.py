@@ -19,8 +19,8 @@ class AdViewSet(viewsets.ModelViewSet):
     serializer_class = AdSerializer
     pagination_class = AdPagination
     permission_classes = [IsAuthenticated]
-    filter_backends = (DjangoFilterBackend,)
-    filterset_class = AdFilter
+    filter_backends = (DjangoFilterBackend,) # Подключаем библотеку, отвечающую за фильтрацию к CBV
+    filterset_class = AdFilter# Выбираем наш фильтр
 
     def get_serializer_class(self):
         if self.action in ['retrieve']:
